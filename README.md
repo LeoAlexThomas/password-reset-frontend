@@ -1,16 +1,114 @@
-# React + Vite
+# Password Reset
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple website for user management system, built using React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User can request password reset link by providing their registered email.
+- User will receive a password reset link in their email.
+- User can set a new password using the link provided in the email.
+- Form validations for email and password fields.
+- Responsive design for better user experience on different devices.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 7
+- Tailwind CSS 4
+- React Icons
+- Lodash
+- Axios for API calls
+- React Toastify for notifications
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+PASSWORD-RESET-FRONTEND/
+├── public/
+│   ├── Images/
+│   │   ├── login.webp
+│   │   ├── signup.webp
+├── src/
+│   ├── Components/
+│   │   ├── FormComponents/
+│   │   │   ├── InputField.jsx
+│   │   ├── EmptyMessage.jsx
+│   │   ├── ErrorMessage.jsx
+│   │   ├── FormTitle.jsx
+│   │   ├── Loading.jsx
+│   │   ├── PrimaryButton.jsx
+│   │   ├── UserLogin.jsx
+│   │   ├── UserLoginForm.jsx
+│   │   ├── UserRegister.jsx
+│   │   ├── UserRegisterAndLoginForm.jsx
+│   │   ├── UserRegisterForm.jsx
+│   ├── Hooks/
+│   │   ├── makeApiCalls.jsx
+│   ├── Pages/
+│   │   ├── ForgotPassword.jsx
+│   │   ├── ResetPassword.jsx
+│   ├── Utils/
+│   │   ├── api.js
+│   │   ├── common.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── netlify.toml
+├── vite.config.js
+├── eslint.config.js
+└── package.json
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/LeoAlexThomas/password-reset-frontend.git
+   cd password-reset-frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+### Development
+
+To start the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+The application will be available at `http://localhost:5173` by default.
+
+### Building for Production
+
+To create a production build:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
