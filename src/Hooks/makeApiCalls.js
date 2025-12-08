@@ -23,7 +23,10 @@ const useApi = () => {
       setIsLoading(false);
       if (!onError) {
         // Showing error toast message
-        toast.error(error.response.data.message);
+        toast.error(
+          error.response?.data?.message ??
+            "Something went wrong, please try again later"
+        );
       } else {
         onError(error);
       }
