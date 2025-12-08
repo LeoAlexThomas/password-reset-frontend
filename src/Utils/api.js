@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3001/api",
+  baseURL: "https://password-reset-backend-rby7.onrender.com/api",
 });
 
 api.interceptors.request.use(
