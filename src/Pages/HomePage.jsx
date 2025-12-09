@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import UserRegister from "./UserRegister";
-import UserLogin from "./UserLogin";
+import { useState } from "react";
+import UserLogin from "../Components/UserLogin";
+import UserRegister from "../Components/UserRegister";
 
-const UserRegisterAndLogin = () => {
+const HomePage = () => {
   const [showLoginForm, setShowLoginForm] = useState(true);
 
   const handleShowLogin = (val) => {
@@ -16,4 +16,4 @@ const UserRegisterAndLogin = () => {
   return <UserRegister onLoginPressed={() => handleShowLogin(true)} />;
 };
 
-export default UserRegisterAndLogin;
+export default HomePage;

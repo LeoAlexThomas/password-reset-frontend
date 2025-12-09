@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UserRegisterAndLogin from "./Components/UserRegisterAndLogin";
+import HomePage from "./Pages/HomePage";
 import ForgotPassword from "./Pages/ForgotPassword";
 import { ToastContainer } from "react-toastify";
 import ResetPassword from "./Pages/ResetPassword";
@@ -11,7 +11,7 @@ const App = () => {
       <ToastContainer />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<UserRegisterAndLogin />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/resetPassword" element={<ResetPassword />} />
         </Routes>

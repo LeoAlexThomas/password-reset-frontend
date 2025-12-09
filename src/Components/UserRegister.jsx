@@ -8,7 +8,7 @@ const UserRegister = ({ onLoginPressed }) => {
         <img
           src="/images/signup.webp"
           alt="signup"
-          className="h-screen object-cover"
+          className="w-full h-screen object-cover"
         />
       </div>
       <div className="p-4 w-full self-center content-center">
